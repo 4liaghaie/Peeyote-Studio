@@ -1,0 +1,61 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load static %}
+{% block title %}Peeyote{% endblock %}
+{% block content %}
+<div
+class=" masthead"
+>
+</div>
+<div
+class=" mastbar"
+>
+<div class="mask rgba-black-strong">
+    <div
+      class="container h-100 d-flex justify-content-center align-items-center"
+    >
+      <div class=" smooth-scroll">
+        <div class="col-md-12">
+          <div class="white-text text-center">
+            <h3
+              style="color: white"
+              class="display-5 wow fadeIn"
+              data-wow-delay="0.5s"
+            >
+              Catch the moment
+            </h3>
+            <a class="text-warning" href="#">Order our service </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="mywork">
+    <h1 class="display-1 pb-5 pt-5 text-center hportf scroll-reveal">Portfolio</h1>
+    <div class="row scroll-reveal">
+        <div class="column scroll-reveal">
+          {% for landing in landings %}
+          <img src="{{ landing.image.url }}">
+          {% endfor %}
+  
+        </div>
+        <div class="column scroll-reveal">
+          
+          {% for landing1 in landings1 %}
+          <img src="{{ landing1.image.url }}">
+          {% endfor %}
+
+        </div>
+          <div class="column ">
+            {% for landing2 in landings2 %}
+            <img src="{{ landing2.image.url }}">
+            {% endfor %}
+          </div>
+
+      </div>
+      <div class="mt-5"></div>
+</section>
+
+
+{% endblock %}

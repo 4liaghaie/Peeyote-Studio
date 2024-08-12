@@ -1,0 +1,48 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load static %}
+{% block title %}Peeyote{% endblock %}
+{% block content %}
+<div class="portnav"></div>
+<section class="portfo">
+  <h1 class="display-1 pb-5 pt-5 text-center hportf scroll-reveal">Commercial</h1>
+  <div  class="swiper mySwiper2">
+  
+      <div class="swiper-wrapper slidcont">
+      
+        {% for cmr in commercials %}
+        <div class="swiper-slide slide2"><img src="{{ cmr.image.url }}" class="slideimg2 scroll-reveal"/></div>
+        {% endfor %}
+      
+      </div>
+      
+      <div class=" swiper-button-next2 swiper-button-next"></div>
+      <div class=" swiper-button-prev2 swiper-button-prev"></div>
+      </div>
+      <div class="mt-1"></div>
+  
+  <div  class="swiper mySwiper3">
+  
+  <div class="swiper-wrapper slidcont">
+  
+    {% for cmr1 in commercials1 %}
+    <div class="swiper-slide slide1"><img src="{{ cmr1.image.url }}" class="slideimg scroll-reveal"/></div>
+    {% endfor %}
+  
+  
+  </div>
+  
+  <div class=" swiper-button-next3 swiper-button-next"></div>
+  <div class=" swiper-button-prev3 swiper-button-prev"></div>
+  <div class="mt-3"></div>
+  </div>
+  
+  
+  
+  </section>
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="{% static 'js/scripts.js' %} "></script>
+  {% endblock %}
